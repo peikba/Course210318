@@ -8,6 +8,7 @@ page 123456723 "Seminar Report Selection"
     PageType = Worksheet;
     SaveValues = true;
     SourceTable = "Seminar Report Selections";
+    UsageCategory=Administration;
 
     layout
     {

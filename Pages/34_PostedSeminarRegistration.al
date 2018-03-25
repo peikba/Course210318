@@ -10,7 +10,6 @@ page 123456734 "Posted Seminar Registration"
     Editable = false;
     PageType = Document;
     SourceTable = "Posted Seminar Reg. Header";
-    UsageCategory=Documents;
 
     layout
     {

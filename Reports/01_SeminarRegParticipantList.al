@@ -8,7 +8,8 @@ report 123456701 SeminarRegParticipantList
     {
         dataitem(SeminarRegistrationHeader;"Seminar Registration Header")
         {
-            DataItemTableView=sorting("No.");RequestFilterFields="No.","Seminar No."; 
+            DataItemTableView=sorting("No.");
+            RequestFilterFields="No.","Seminar No."; 
 
             column(No_;"No.")
             {
@@ -65,27 +66,8 @@ report 123456701 SeminarRegParticipantList
         }
     }
     
-    requestpage
-    {
-        layout
-        {
-            area(content)
-            {
-                group(GroupName)
-                {
-//                    field()
-//                    {
-//                    }
-                }
-            }
-        }
-    }
-
     labels
     {
-        label(SeminarRegistrationHeaderCap;ENU='Seminar Registration Header') 
+        SeminarRegistrationHeaderCap ='Seminar Registration Header';
     }
-
-    var
-        myInt : Integer;
 }

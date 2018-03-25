@@ -8,8 +8,8 @@
             "server": "http://localhost",
             "serverInstance": "DynamicsNAV110W1",
             "authentication": "Windows",
-            //"schemaUpdateMode": "Synchronize"
-            "schemaUpdateMode": "Recreate"
+            "schemaUpdateMode": "Synchronize"
+            //"schemaUpdateMode": "Recreate"
         }
     ]
 }

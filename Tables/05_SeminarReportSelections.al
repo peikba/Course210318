@@ -60,5 +60,13 @@ table 123456705 "Seminar Report Selections"
         else
           Sequence := '1';
     end;
+    procedure PrintReportSelection(inUsage : Integer;SemRegHeader : Record "Seminar Registration Header");
+    var
+        SemReportSelection : Record "Seminar Report Selections";
+    begin
+        SemReportSelection.SetRange(Usage,inUsage);
+        if SemReportSelection.FindFirst then
+          report.run(SemReportSelection."Report ID",true,false,SemRegHeader);
+    end;
 }
 

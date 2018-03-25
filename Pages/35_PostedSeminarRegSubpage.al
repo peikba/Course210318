@@ -9,7 +9,6 @@ page 123456735 "Posted Seminar Reg. Subpage"
     DelayedInsert = true;
     PageType = ListPart;
     SourceTable = "Posted Seminar Reg. Line";
-    UsageCategory=Lists;
 
     layout
     {
