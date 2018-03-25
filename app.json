@@ -13,10 +13,12 @@
   "capabilities": [],
   "dependencies": [],
   "screenshots": [],
+  "showMyCode": true,
   "platform": "11.0.0.0",
   "application": "11.0.0.0",
+  "target": "Internal",
   "idRange": {
-    "from": 50100,
-    "to": 50149
+    "from": 123456700,
+    "to": 123456799
   }
 }
