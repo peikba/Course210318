@@ -71,16 +71,16 @@ codeunit 123456700 "Seminar-Post"
                     PstdSeminarRegLine."Document No." := PstdSeminarRegHeader."No.";
                     PstdSeminarRegLine.Insert;
 
-                    // Post charges to seminar ledger 
-                    PostCharges;
-                    // Post instructor to seminar ledger 
-                    PostSeminarJnlLine(0); // Instructor
-                    // Post seminar room to seminar ledger 
-                    PostSeminarJnlLine(1); // Room
-                    
-                    Delete(true);
-
                 until SeminarRegLine.Next = 0; 
+
+                // Post charges to seminar ledger 
+                PostCharges;
+                // Post instructor to seminar ledger 
+                PostSeminarJnlLine(0); // Instructor
+                // Post seminar room to seminar ledger 
+                PostSeminarJnlLine(1); // Room
+                
+                Delete(true);
             end;
 
         end;

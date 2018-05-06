@@ -38,12 +38,13 @@ begin
       "Table Name" := COPYSTR(PostedSeminarRegHeader.TableCaption,1,MAXSTRLEN("Table Name"));
       "No. of Records" := DocNoOfRecords;
       Insert;
+      SelectLatestVersion;
     end;
   end;
 
   if SeminarLedgerEntry.ReadPermission then begin 
     SeminarLedgerEntry.Reset; 
-    SeminarLedgerEntry.SetFilter("Entry No.",DocNoFilter); 
+    SeminarLedgerEntry.SetFilter("Document No.",DocNoFilter); 
     SeminarLedgerEntry.SetFilter("Posting Date",PostingDateFilter); 
     DocNoOfRecords:= SeminarLedgerEntry.Count;
     With DocumentEntry do begin
@@ -60,6 +61,7 @@ begin
       "Table Name" := COPYSTR(SeminarLedgerEntry.TableCaption,1,MAXSTRLEN("Table Name"));
       "No. of Records" := DocNoOfRecords;
       Insert;
+      SelectLatestVersion;
     end;
   end;
 end;

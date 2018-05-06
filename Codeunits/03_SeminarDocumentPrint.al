@@ -19,7 +19,7 @@ codeunit 123456703 "Seminar Document-Print"
         ReportSelection.Ascending := false;
         ReportSelection.Find('-');
         repeat
-          Report.RunModal(ReportSelection."Report ID",true,false,SeminarRegHeader);
+          Report.Run(ReportSelection."Report ID",true,false,SeminarRegHeader);
         until ReportSelection.NEXT = 0;
     end;
 }
